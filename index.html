@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="./css/fontawesome.min.css">
+    <script src="./to-do-app.js" type="module"></script>
+    <script src="./to-do-item.js" type="module"></script>
+    <script src="./time.js" type="script"></script>
+
+
+    <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.0.0/webcomponents-bundle.js"></script>
+
+    <title>Pragma - Notes</title>
+</head>
+
+<body>
+
+    <style>
+        @font-face {
+            font-family: genericFont;
+            src: url("font/OpenSans-Light.ttf");
+        }
+
+        @font-face {
+            font-family: thinFont;
+            src: url("font/OpenSansCondensed-Light.ttf");
+        }
+
+        @font-face {
+            font-family: swirllFont;
+            src: url("font/Srisakdi-Regular.ttf");
+        }
+
+        body {
+            padding: 15px;
+            color: #494949;
+        }
+
+        header {
+            font-family: swirllFont;
+            text-align: center;
+            font-size: 42px;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        @media only screen and (max-width: 1036px) {
+            .flex-container {
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: center;
+            }
+        }
+
+        @media only screen and (max-width: 736px) {
+            .flex-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    </style>
+
+    <div class="flex-container">
+        <img src="img/flower.png" width="300" height="200">
+        <header>
+            Make your To-Do list:
+            <to-do-app></to-do-app>
+        </header>
+        <img src="img/flower.png" width="300" height="200">
+    </div>
+
+
+</body>
+
+</html>
